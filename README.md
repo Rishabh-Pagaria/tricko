@@ -1,54 +1,83 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
+# Tricko 🎃
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A Halloween-themed mobile app that connects treat-givers with trick-or-treaters around Texas A&M University. Built with React Native, Expo, and Firebase.
 
-## Get started
+## Features
 
-1. Install dependencies
+### For Trick-or-Treaters
+- Interactive map showing active treat locations
+- View available treats and trick themes at each location
+- Real-time updates of active houses
+- View treat details by tapping on orange markers
 
-   ```bash
-   npm install
-   ```
+### For House Owners
+- Mark your house as active on the map
+- Specify available treats
+- Set your preferred trick theme
+- Manage your house's visibility
 
-2. Start the app
+## Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+- **Frontend**: React Native with Expo
+- **Maps**: React Native Maps
+- **Backend**: Firebase (Firestore & Authentication)
+- **State Management**: React Context API
+- **Navigation**: Expo Router
+- **Authentication**: Firebase Auth
+- **Styling**: React Native StyleSheet
 
-In the output, you'll find options to open the app in a
+## Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/Rishabh-Pagaria/tricko.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+cd tricko
+npm install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npx expo start -c
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Open the app on your device using Expo Go or run on a simulator
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Project Structure
 
-## Join the community
+```
+tricko/
+├── app/                 # Expo Router screens
+│   ├── owner/          # House owner screens
+│   └── tricker/        # Trick-or-treater screens
+├── components/         # Reusable components
+├── src/
+│   ├── lib/           # Firebase config and auth
+│   └── services/      # API services
+├── assets/            # Images and animations
+└── scripts/           # Utility scripts
+```
 
-Join our community of developers creating universal apps.
+## Features in Detail
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
-# tricko
->>>>>>> bb4495c6ffc17bb0edf762e65bcfc5803dd1168b
+### Map View
+- Orange markers indicate active houses
+- Tap markers to view treat and trick information
+- Real-time updates for house status
+
+### User Roles
+- **House Owners**: Can publish their house location and manage treat availability
+- **Trick-or-Treaters**: Can view active houses and their details
+
+## Development Scripts
+
+- `npm start`: Start the Expo development server
+- `scripts/seed-houses.ts`: Add sample house data to Firestore
+
+
+## Contributors
+
+- Rishabh Pagaria
